@@ -1,0 +1,45 @@
+print("Welcome to my first Game!")
+name = input("What is your name? ")
+age = int(input("what is your age? "))
+
+
+health = 10
+
+print("You are starting with",health,"health")
+
+if age >= 20:
+    print("You are old Enough!!")
+
+
+    wants_to_play = input("Do you want to play ?").lower()
+
+    if wants_to_play == "yes":
+        print ("Lets Play !! ")
+      
+        left_or_right = input("do you want to go left or right?(left/right)?" )
+        if left_or_right =="right":
+          ans = input("You reach the end of the dungeon where there in a stone lay a sword and a health potion. What do you do(sword/health potion) ?...")
+
+          if ans == "sword":
+              print("you picked up sword and killed the monster")
+          elif ans == "health potion":
+              print("you managed to drink health potion but the monster was stronger than it, so you lost 5 health. ")
+              health -= 5
+          else: 
+             print("you got out lucky")
+          ans = input("you notice a hut nearby, where you go(hut/village)?")
+          if ans == "hut":
+              print("You go inside the hut, but there you are met with a ghoul and you loose 5 health.")
+              health -= 5
+
+              if health <=0:
+                  print("You now have 0 health and you lost the game !")
+              else:
+                   print("you survived!!..you somehow won!!")
+    else:
+        print("people in the village are ghost and you loose life")   
+
+else:
+    print("you run out of the village")
+
+
